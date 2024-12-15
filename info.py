@@ -34,10 +34,10 @@ if len(BOT_TOKEN) == 0:
 PORT = int(environ.get('PORT', '80'))
 
 # Bot pics
-PICS = (environ.get('PICS', 'https://telegra.ph/file/58fef5cb458d5b29b0186.jpg https://telegra.ph/file/f0aa4f433132769f8970c.jpg https://telegra.ph/file/f515fbc2084592eca60a5.jpg https://telegra.ph/file/20dbdcffaa89bd3d09a74.jpg https://telegra.ph/file/6045ba953af4def846238.jpg')).split()
+PICS = (environ.get('PICS', 'https://graph.org/file/18ddd37382b8f3ef49e7e-37b28b2afbc58247b7.jpg https://graph.org/file/96432b7f0a4dda8f35df5-d1892521e9beb56d32.jpg https://graph.org/file/05039361a52f538d4c725-654aa7d4885708229c.jpg https://graph.org/file/498858bd81f7cb76b185d-aac6fcb26a702d8818.jpg https://telegra.ph/file/6045ba953af4def846238.jpg')).split()
 
 # Bot Admins
-ADMINS = environ.get('ADMINS', '')
+ADMINS = environ.get('ADMINS', '7244446698')
 if len(ADMINS) == 0:
     print('Error - ADMINS is missing, exiting now')
     exit()
@@ -45,13 +45,13 @@ else:
     ADMINS = [int(admins) for admins in ADMINS.split()]
 
 # Channels
-INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '').split()]
+INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '-1002397571999').split()]
 if len(INDEX_CHANNELS) == 0:
     print('Info - INDEX_CHANNELS is empty')
-AUTH_CHANNEL = [int(auth_channels) for auth_channels in environ.get('AUTH_CHANNEL', '').split()]
+AUTH_CHANNEL = [int(auth_channels) for auth_channels in environ.get('AUTH_CHANNEL', '-1002344221556').split()]
 if len(AUTH_CHANNEL) == 0:
     print('Info - AUTH_CHANNEL is empty')
-LOG_CHANNEL = environ.get('LOG_CHANNEL', '')
+LOG_CHANNEL = environ.get('LOG_CHANNEL', '-1002486915650')
 if len(LOG_CHANNEL) == 0:
     print('Error - LOG_CHANNEL is missing, exiting now')
     exit()
@@ -60,7 +60,7 @@ else:
 IS_FSUB = is_enabled('IS_FSUB', True)
 
 # support group
-SUPPORT_GROUP = environ.get('SUPPORT_GROUP', '')
+SUPPORT_GROUP = environ.get('SUPPORT_GROUP', 'https://t.me/moviegroupli')
 if len(SUPPORT_GROUP) == 0:
     print('Error - SUPPORT_GROUP is missing, exiting now')
     exit()
@@ -73,7 +73,7 @@ if len(OPENAI_API) == 0:
     print('Info - OPENAI_API is empty')
 
 # MongoDB information
-DATABASE_URL = environ.get('DATABASE_URL', "")
+DATABASE_URL = environ.get('DATABASE_URL', "mongodb+srv://aliakhtae5:GoqDgw7jbZ4IOGPh@cluster0.nl5vm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 if len(DATABASE_URL) == 0:
     print('Error - DATABASE_URL is missing, exiting now')
     exit()
@@ -81,12 +81,12 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Files')
 
 # Links
-SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/+axGvZraAH6Q3NTg1')
-OWNER_USERNAME = environ.get("OWNER_USERNAME", "https://t.me/i_am_yamraj")
-UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/NeonGhost_Networks')
-FILMS_LINK = environ.get('FILMS_LINK', 'https://t.me/+axGvZraAH6Q3NTg1')
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/NeonGhost_Networks")
-VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/NeonGhost_Networks")
+SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/uvkttvlusvod5')
+OWNER_USERNAME = environ.get("OWNER_USERNAME", "https://t.me/Supermanremake")
+UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/uvkttvlusvod5')
+FILMS_LINK = environ.get('FILMS_LINK', 'https://t.me/uvkttvlusvod5')
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/Supermanremake")
+VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/uvkttvlusvod5")
 
 # Bot settings
 DELETE_TIME = int(environ.get('DELETE_TIME', 3600)) # Add time in seconds
@@ -113,22 +113,22 @@ IMDB = is_enabled('IMDB', True)
 SPELL_CHECK = is_enabled("SPELL_CHECK", True)
 SHORTLINK = is_enabled('SHORTLINK', False)
 
-PAYMENT_QR = environ.get('PAYMENT_QR', 'http://graph.org/file/cacbbea472e5a48ce0d64.jpg')
+PAYMENT_QR = environ.get('PAYMENT_QR', 'https://graph.org/file/7101b3c8f07334d93e925-c5c7dcfcd8c0d269ec.jpg')
 
 # for stream
-IS_STREAM = is_enabled('IS_STREAM', True)
+IS_STREAM = is_enabled('IS_STREAM', False)
 BIN_CHANNEL = environ.get("BIN_CHANNEL", "")
 if len(BIN_CHANNEL) == 0:
     print('Error - BIN_CHANNEL is missing, exiting now')
     exit()
 else:
     BIN_CHANNEL = int(BIN_CHANNEL)
-URL = environ.get("URL", "")
+URL = environ.get("URL", "https://t.me/jwjwja72")
 if len(URL) == 0:
     print('Error - URL is missing, exiting now')
     exit()
 else:
-    if URL.startswith(('https://', 'http://')):
+    if URL.startswith(('https://t.me/jwjwja72', 'http://')):
         if not URL.endswith("/"):
             URL += '/'
     elif is_valid_ip(URL):
