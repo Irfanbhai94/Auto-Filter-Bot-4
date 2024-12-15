@@ -9,7 +9,7 @@ class script(object):
   Library: <a href=https://pyrogram.org>Pyrogram</a>"""
 
     MY_OWNER_TXT = """ Name: I AM ITACHI"""
-  Username: @I_AM_YAMRAJ
+  Username: @i_am_yamraj
   Country: India
 
     STATUS_TXT = """🗂 Total Files: <code>{}</code>"""
