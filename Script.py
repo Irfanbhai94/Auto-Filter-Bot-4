@@ -8,8 +8,8 @@ class script(object):
   Language: <a href=https://www.python.org>Python</a>
   Library: <a href=https://pyrogram.org>Pyrogram</a>"""
 
-    MY_OWNER_TXT = """★ Name: I AM ITACHI"""
-  Username: @Supermanremake
+    MY_OWNER_TXT = """ Name: I AM ITACHI"""
+  Username: @I_AM_YAMRAJ
   Country: India
 
     STATUS_TXT = """🗂 Total Files: <code>{}</code>"""
